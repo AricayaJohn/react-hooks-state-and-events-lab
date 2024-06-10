@@ -7,7 +7,7 @@ function Item({ name, category }) {
   function handleCart() {
     setInCart((inCart) => !inCart);
   }
-  const status = inCart ? "remove item" : "add item";
+ const status = inCart ? "remove item" : "add item";
 
   return (
     <li className = {inCart ? "in-cart" : ""}>
@@ -16,7 +16,8 @@ function Item({ name, category }) {
       <button 
       className={status} 
       onClick = {handleCart}>
-        {status}</button>
+       {inCart ? "Remove from Cart" : "Add to Cart"}
+       </button>
     </li>
   );
 }
